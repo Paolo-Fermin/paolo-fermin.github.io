@@ -69,20 +69,65 @@ class Hitchhiking {
                     var y = mouseY;
                     if (x > 100 && x < 250 &&
                         y > 500 && y < 575) {
-                        this.level_state = "blame";
+                        this.level_state = "lesson";
                     } else if (x > 350 && x < 500 &&
                         y > 500 && y < 575) {
-                        this.level_state = "blame";
+                        this.level_state = "lesson";
                     }
                 }
                 break;
-            case "blame":
+            case "lesson":
                 noStroke();
                 textSize(38);
                 textLeading(35);
                 textAlign(CENTER);
+
+                text("Most people would agree that\nMr. Brown will experience\nmore regret and Mr. Smith\nwill receive more criticism.\n\nRegret and blame are evoked\nby comparison to the norm, but\nthe norms are different.", 300, 100);
+
+                // next button
+                textSize(48);
+                stroke(color('black'));
+                fill(color('white'));
+                rect(225, 500, 150, 75);
+                fill(color('black'));
+                noStroke();
+                text("Next", 300, 550);
+
+                if (mouseIsPressed) {
+                    var x = mouseX;
+                    var y = mouseY;
+                    if (x > 225 && x < 375 &&
+                        y > 500 && y < 575) {
+                        this.level_state = "lesson2";
+                    }
+                }
+
                 break;
-  
+            case "lesson2":
+                textSize(38);
+                textLeading(35);
+                textAlign(CENTER);
+
+                text("Despite the habitual risks\nthat Mr. Smith takes, Mr. Brown\nwill feel more regret because\nhe acted out of character a single time.\n\nThe regret we feel by deviations\nfrom the norm makes us bias\ntowards risk-averse behavior.", 300, 100);
+
+                // next button
+                textSize(48);
+                stroke(color('black'));
+                fill(color('white'));
+                rect(225, 500, 150, 75);
+                fill(color('black'));
+                noStroke();
+                text("Next", 300, 550);
+
+                if (mouseIsPressed) {
+                    var x = mouseX;
+                    var y = mouseY;
+                    if (x > 225 && x < 375 &&
+                        y > 500 && y < 575) {
+                        this.level_state = "start";
+                        game_state = "start_screen";
+                    }
+                }
 
         }
     }

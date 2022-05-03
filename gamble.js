@@ -8,17 +8,19 @@ class Gamble {
     draw() {
         switch (this.level_state) {
             case "start":
+                noStroke();
                 textSize(38);
                 textAlign(CENTER);
                 textLeading(35);
                 text('Consider a 50/50 gamble\nwhere you can lose $10.\n', 300, 100);
-                text('What is the smallest gain\nthat makes this gamble attractive?', 300, 205);
+                text('What is the smallest amount of money\nthat makes this gamble attractive?', 300, 205);
                 
                 // place answer text
                 textSize(48);
                 text("$" + this.answer, 250, 450);
 
                 // place a line under the answer
+                stroke(color('black'));
                 line(200, 475, 400, 475);    
                 
                 break;
@@ -28,7 +30,7 @@ class Gamble {
                 textLeading(35);
 
                 var ratio = this.answer / 10.0;
-
+                noStroke();
                 text('Like most people, you are loss averse.\nYour \"loss aversion ratio\" is', 300, 100);
                 text(ratio.toFixed(2), 300, 170);
                 text('The average loss aversion ratio is \nbetween 1.5 and 2.5\n', 300, 200);
@@ -57,7 +59,7 @@ class Gamble {
                 textLeading(35);
 
                 var ratio = this.answer / 10.0;
-
+                noStroke();
                 text('Unlike most people,\nyou are indifferent to risk.\nYour \"loss aversion ratio\" is', 300, 60);
                 text(ratio.toFixed(2), 300, 170);
                 text('The average loss aversion ratio is \nbetween 1.5 and 2.5\n', 300, 200);

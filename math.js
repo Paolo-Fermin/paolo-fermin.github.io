@@ -14,7 +14,7 @@ class MathProblems {
             textAlign(CENTER);
             // text(this.level_name, 300, 100);
             textLeading(48);
-
+            noStroke();
             text("Take a look at \nthis math problem", 300, 75);
             textSize(48);
 
@@ -28,11 +28,12 @@ class MathProblems {
 
                 // draw two rectangles, one on each side near the bottom of the canvas
                 // when the user clicks on one of the rectangles, update the game state
-
+                stroke(color('black'));
                 fill(color('white'));
                 rect(100, 400, 150, 75);
                 rect(350, 400, 150, 75);
 
+                noStroke();
                 fill(color('black'));
                 text("Smaller", 175, 450);
                 text("Bigger", 425, 450);
@@ -54,10 +55,13 @@ class MathProblems {
                 text('Try again!', 300, 300);
 
                 // next button
+                stroke(color('black'));
                 textSize(48);
                 fill(color('white'));
                 rect(225, 500, 150, 75);
                 fill(color('black'));
+
+                noStroke();
                 text("Next", 300, 550);
             
                 if (mouseIsPressed) {
@@ -111,19 +115,20 @@ class MathProblems {
                     if (x > 225 && x < 375 &&
                         y > 500 && y < 575) {
                         this.level_state = "system2";
+                        this.answer = "";
                     }
                 }
 
                 break;
             
             case "system2":
+                noStroke();
                 text("Now take your time to\nanswer the problem", 300, 275);
                 // stroke(color('black'));
                 // line(20, 450, this.myInput.x + this.myInput.width, 450);
-
                 text(this.answer, 300, 400);
                 // draw a line underneath the answer
-                // stroke(color('black'));
+                stroke(color('black'));
                 line(200, 425, 400, 425);
 
 
@@ -154,10 +159,9 @@ class MathProblems {
                 break;
             case "lesson":
                 textAlign(CENTER);
-                textSize(40);
-                text("SYSTEM 1 and SYSTEM 2", 300, 100);
-                text("System 1: Operates automatically \nand quickly, with little \neffort nor self control.", 300, 150);
-                text("System 2: Allocates attention \nto effortful mental activities.\nAssociated with the sense of \nagency, choice, and concentration", 300, 320);
+                textSize(38);
+                textLeading(35);
+                text("SYSTEM 1 and SYSTEM 2\nSystem 1: Operates automatically \nand quickly, with little \neffort nor self control.\n\nSystem 2: Allocates attention \nto effortful mental activities.\nAssociated with the sense of \nagency, choice, and concentration", 300, 100);
 
                 // next button
                 textSize(48);
