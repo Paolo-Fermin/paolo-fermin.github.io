@@ -16,7 +16,7 @@ class Title {
                 fill(color('white'));
                 rect(425, 500, 150, 75);
                 fill(color('black'));
-                text("Next", 465, 550);
+                text("Next", 457, 550);
             
                 if (mouseIsPressed) {
                     var x = mouseX;

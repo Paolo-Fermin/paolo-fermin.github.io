@@ -13,7 +13,7 @@ class Gamble {
                 textAlign(CENTER);
                 textLeading(35);
                 text('Consider a 50/50 gamble\nwhere you can lose $10.\n', 300, 100);
-                text('What is the smallest amount of money\nthat makes this gamble attractive?', 300, 205);
+                text('What is the smallest amount of money\nthat you would want to gain\nthat makes this gamble attractive?', 300, 205);
                 
                 // place answer text
                 textSize(48);
