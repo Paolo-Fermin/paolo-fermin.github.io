@@ -1,6 +1,6 @@
 // Control what part of the game is running
 // i.e. start_screen, level_1, win_screen, lose_screen, etc.
-var game_state = "start_screen";
+var game_state = "title";
 
 var level1, level2, level3;
 var level_dict;
@@ -17,20 +17,24 @@ function setup() {
 
     textFont(font);
 
+    title = new Title();
     start_screen = new StartScreen();
     level1 = new MathProblems();
-	  level2 = new BatBall();
+    level2 = new BatBall();
     level3 = new Gamble();
     level4 = new Fourfold();
     level5 = new Hitchhiking();
+    level6 = new Hitler();
 
     level_dict = {
         "start_screen": start_screen,
+        "title": title,
         "level_1": level1,
         "level_2": level2,
         "level_3": level3,
         "level_4": level4,
-        "level_5": level5
+        "level_5": level5,
+        "level_6": level6
     }
 
     bg = loadImage("looseleaf.jpg");

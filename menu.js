@@ -33,7 +33,7 @@ class StartScreen {
         text('Gamble', 200, 465);
         text('Lottery', 400, 265);
         text('Hitchhike', 400, 365);
-        text('Persuasion', 400, 465);
+        text('History', 400, 465);
 
         // when a user clicks on a rectangle, update the game state
         if (mouseIsPressed) {
